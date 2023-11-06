@@ -1,1 +1,2 @@
-- The Solution to Assignment-1 which is to provide more cached layers than the standard build is in Dockerfile-1
+- The Solution to Assignment-1 which is to provide more cached layers than the standard build is in Dockerfile-1 (Image size 191MB)
+- The Solution to Assignment-2 which was to find a way to decrease the size of the docker image is in Dockerfile-2 (Image size 113MB)
