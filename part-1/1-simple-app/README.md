@@ -1,5 +1,1 @@
-
- - Install Node.js
- - cd into folder
- - npm install
- - node index.js
+- The Solution to Assignment-1 which is to provide more cached layers than the standard build is in Dockerfile-1
