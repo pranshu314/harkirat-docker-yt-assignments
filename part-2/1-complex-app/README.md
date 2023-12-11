@@ -1,11 +1,13 @@
+- The solution to this assignment is contained in Dockerfile-1 (Image size 159MB)
 
- - Install Node.js
- - cd into folder
- - npm install
- - node index.js
-
-
-## Solution
-The solution to the assignment is that we first copy over package.json and package-lock.json , run npm install followed by copying over the code
-
-This way, the layer which runs npm install can be cached until package.json isn't changed, which doesn't happen very often in the lifecycle of a project
+### Docker run commands
+#### For building Dockerfile-1
+- docker build -f Dockerfile-1 -t hkirat-assign-3
+#### For creating volume
+- docker volume create hkirat-assign
+#### For creating network
+- docker network create hkirat-assign
+#### For mongodb
+- docker run --rm --network hkirat-assign --volume hkirat-assign:/db/data -p 27017:27017 --name mongodb-container mongo
+#### For Dockerfile-1 container
+- docker run --rm --network hkirat-assign -p 3000:3000 hkirat-assign-3
