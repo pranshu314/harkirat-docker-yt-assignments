@@ -1,11 +1,7 @@
+- The solution to this Assignment is in Dockerfile-1 (Image Size 161MB for both prod and dev)
 
- - Install Node.js
- - cd into folder
- - npm install
- - node index.js
-
-
-## Solution
-The solution to the assignment is that we first copy over package.json and package-lock.json , run npm install followed by copying over the code
-
-This way, the layer which runs npm install can be cached until package.json isn't changed, which doesn't happen very often in the lifecycle of a project
+### Docker Build commands
+#### For production
+- docker build -f Dockerfile-1 --target production -t hkirat-assign-6:prod
+#### For development
+- docker build -f Dockerfile-1 --target development -t hkirat-assign-6:dev
