@@ -1,0 +1,17 @@
+services:
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-vol:/data/db
+
+  hkirat-assign-7:
+    build:
+      context: .
+      dockerfile: ./Dockerfile-1
+    ports:
+      - "3000:3000"
+
+volumes:
+  mongodb-vol:
